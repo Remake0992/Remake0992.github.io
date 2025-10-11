@@ -18,5 +18,6 @@ I have a strong passion for all gadgets, especially those that aim to solve some
 - AZ-104 
 - AZ-500
 - Microsoft 365 Certified: Fundamentals
+
 ####Q4-2026
 - JLPT N3
