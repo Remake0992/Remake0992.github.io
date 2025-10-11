@@ -1,5 +1,5 @@
 ---
-title: Creating a website with Jekyll
+title: 2025-10-11-Creating a website with Jekyll
 date: 2025-10-11 15:05:00 
 categories: [homelab,selfhosted,professional-development]
 tags: [servers,sites,selfhosted]
