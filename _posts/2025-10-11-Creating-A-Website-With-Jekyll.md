@@ -5,8 +5,6 @@ categories: [homelab,selfhosted,professional-development]
 tags: [servers,sites,selfhosted]
 ---
 
-# Creating a Website with Jekyll
-
 Welcome to the first post of my personal website! I have been wanting to create a portfolio-ish website for a while now. I followed Techno Tim's guide on YouTube to create the website using GitHub and GitHub pages.
 
 This will be the first project documented in the site. Here's how it came to be!
