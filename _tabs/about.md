@@ -1,6 +1,6 @@
 ---
 # the default layout is 'page'
-layout: About
+layout: Page
 icon: fas fa-info-circle
 order: 4
 ---
