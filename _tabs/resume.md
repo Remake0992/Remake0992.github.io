@@ -1,6 +1,6 @@
 ---
 # the default layout is 'page'
-layout: Resume
+layout: Page
 icon: fas fa-file
 order: 5
 ---
