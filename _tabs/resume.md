@@ -4,53 +4,70 @@ layout: post
 icon: fas fa-file
 order: 5
 ---
-<h1 align="center">Collen Saunders</h1>
+---
+---
+
+# Collen Saunders
+
+<span class="iconify" data-icon="charm:person"></span> [cjs-cloud.com](https://cjs-cloud.com/)
+  : <span class="iconify" data-icon="tabler:brand-github"></span> [github.com/Remake0992](https://github.com/remake0992)
+  : <span class="iconify" data-icon="tabler:phone"></span> [(+1) 336-736-4087](https://wa.me/11234567890)
+
+<span class="iconify" data-icon="ic:outline-location-on"></span> Greensboro, NC
+  : <span class="iconify" data-icon="tabler:brand-linkedin"></span> [linkedin.com/in/collen-saunders](https://linkedin.com/in/collen-saunders/)
+  : <span class="iconify" data-icon="tabler:mail"></span> [inquiries@cjs-cloud.com](mailto:inquiries@cjs-cloud.com)
+
+## Summary
+
+Driven IT professional with deep passion for learning, doing, and mastering. 
+
+## Experience
+
+**IT Support Technician**
+  : **Hoffman and Hoffman, Inc**
+  : **Dec 2023 - Present**
+
+- Administer Microsoft 365, manage mailboxes, shared mailboxes, and permissions
+- Manage identity/access in Microsoft Entra ID
+- Use PowerShell to automate bulk tasks (user/license assignments, group updates, software installs, device cleanup)
+- Onboard/offboard employees: hardware kits, Intune enrollment, M365 licensing, Entra group access, MFA enrollment, and secure deprovisioning/asset returns
+
+**IT Support Specialist**
+  : **Uwharrie Charter Academy**
+  : **May 2021 - July 2023**
+
+- Implemented internet infrastructure across multiple campuses
+- Provided day-to-day desktop, laptop, and mobile device support across Windows, ChromeOS and iOS systems
+- Maintained inventory and storage
+- Supported Kyocera and Epson printing systems
+- Supported and administered Papercut, One-to-One Plus, and Google Workspace.
 
 
-<p align="center">
-  Greensboro, NC | (336) 736-4087 | inquiries@cjs-cloud.com | cjs-cloud.com
-</p>
 
-### Summary
-Information Technology specialist with four years of experience focused on hardware repair and
-installation, maintaining online systems, and software troubleshooting. Driven to develop skillset
-to the fullest possible extent.
+## Education
 
-### Education
-#### **University of North Carolina at Greensboro | Greensboro, North Carolina** 
-*Expected 2027*
+**B.A. in Information Science**
+  : **Sep 2022 - Sep 2027**
 
-*Bachelors of Science in Information Science*
+University of North Carolina at Greensboro
+  : Greensboro, NC
 
-GPA: 3.95/4.0
 
-### Skills
-- Delivers effective communication with technical and non-technical staff in person and via
-telephone and email.
-- Excels in hardware and software troubleshooting, optimization, and maintenance across
-Android, iOS, Windows, MacOS, and Chrome devices.
-- Demonstrates upward proficiency in Windows troubleshooting, Microsoft 365 Suite,
-Active Directory, and general problem solving.
-- Automates processes wherever possible using scripting and other solutions.
 
-### Work Experience
-##### **Hoffman & Hoffman, Inc.- IT Support Technician**
-*December 2023 - Present*
+## Skills
 
-##### **Uwharrie Charter Academy - IT Specialist**
-*May 2021 - July 2023*
+**Programming Languages:** <span class="iconify" data-icon="vscode-icons:file-type-powershell"></span> Powershell, <span class="iconify" data-icon="vscode-icons:file-type-debian"></span> Debian
 
-- Operated, repaired, and optimized various devices including desktops, laptops,
-Chromebook’s, and server systems.
-- Provided minor editing for Uwharrie Charter Academy’s webpage by establishing an area
-to report issues and ask questions.
-- Excelled at multi-tasking in a fast-paced environment while maintaining user uptime.
-Implemented internet infrastructure across three campuses.
-- Developed strong documentation skills whilst utilizing technology department ticketing
-system.
-- Orchestrated the recycling of outdated hardware, dispersing equipment to low-income
-communities.
+**Tools and Frameworks:** Git, Linux, Windows, MacOS, iOS, Android
 
-### Awards
-- Received the April ‘E3’ Eagles in Excellence and Education Award for outstanding
-performance within the IT Technician role.
+**Languages:** English (native), Japanese (colloquial)
+
+## Awards and Honors
+
+**Eagles Excellence in Education (E3) Award**, Uwharrie Charter Academy Board of Directors
+  : 2023
+
+
+
+
+
