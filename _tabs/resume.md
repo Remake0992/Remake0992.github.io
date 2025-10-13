@@ -1,6 +1,6 @@
 ---
 # the default layout is 'page'
-layout: Page
+layout: Post
 icon: fas fa-file
 order: 5
 ---
