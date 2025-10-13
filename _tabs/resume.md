@@ -17,12 +17,11 @@ installation, maintaining online systems, and software troubleshooting. Driven t
 to the fullest possible extent.
 
 ### Education
-University of North Carolina at Greensboro
-August 2027
-Greensboro, North Carolina
-•
-Bachelor of Arts in English, Bachelor of Science in Information Science
-•
+#### **University of North Carolina at Greensboro | Greensboro, North Carolina** 
+*Expected 2027*
+
+*Bachelors of Science in Information Science*
+
 GPA: 3.95/4.0
 
 ### Skills
@@ -35,11 +34,11 @@ Active Directory, and general problem solving.
 - Automates processes wherever possible using scripting and other solutions.
 
 ### Work Experience
-##### Hoffman & Hoffman, Inc.- IT Support Technician
-December 2023 - Present
+##### **Hoffman & Hoffman, Inc.- IT Support Technician**
+*December 2023 - Present*
 
-##### Uwharrie Charter Academy - IT Specialist
-May 2021 - July 2023
+##### **Uwharrie Charter Academy - IT Specialist**
+*May 2021 - July 2023*
 
 - Operated, repaired, and optimized various devices including desktops, laptops,
 Chromebook’s, and server systems.
