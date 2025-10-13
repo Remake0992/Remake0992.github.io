@@ -5,5 +5,6 @@ icon: fas fa-file
 order: 5
 ---
 
+![My_Resume](https://github.com/user-attachments/assets/deca6dbb-315d-4ab6-a171-3dab76e21400)
 
-<img width="9916" height="14033" alt="My_Resume (2)" src="https://github.com/user-attachments/assets/85cd31d8-0f7e-4e1c-ba4a-04d8d91f5b4d" />
+
