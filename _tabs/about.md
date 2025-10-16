@@ -6,7 +6,8 @@ order: 4
 ---
 
 ## About Me
-  
+  ![IMG_0051](https://github.com/user-attachments/assets/b64ad32c-dee9-402f-bd70-304b7035fe2e)
+
 Hey! Welcome to my site. My name is Collen Saunders. I currently reside in Greensboro, North Carolina. 
 
 I am an IT professional who has a deep passsion for learning new things. I am particularly interested in cloud archetecture, though I can really get lost in anything. I have four years of experience in the Information Technology field. In addition to IT-related areas of study, I study Japanese and have a chronic self-hosting addiciton. 
