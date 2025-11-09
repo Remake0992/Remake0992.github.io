@@ -25,5 +25,5 @@ I have a strong passion for all gadgets, especially those that promote productiv
   
 #### Q4-2026
 - JLPT N3
-
+- CCNA
 
