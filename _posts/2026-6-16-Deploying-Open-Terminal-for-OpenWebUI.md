@@ -9,7 +9,7 @@ tags: [openwebui,open-terminal,linux,systemd,sudo,docker,selfhosted]
 
 OpenWebUI is great as a chat interface, but by default it does not magically have access to administer the host systems around it. This becomes especially obvious when OpenWebUI is running in Docker. Giving a container access to `sudo` inside the container does not mean it can administer the baremetal host. Container permissions and host permissions are separate things.
 
-What I set up was a very stupid, but veryworkable approach: **Open Terminal running baremetal on the target machine**.
+What I set up was a very stupid, but very workable approach: **Open Terminal running baremetal on the target machine**.
 
 Instead of trying to make the OpenWebUI container itself privileged, we installed `open-terminal` directly on the Linux host. OpenWebUI can then connect to that Open Terminal service over HTTP using an API key. Open Terminal runs commands locally on the host, under a real Linux user, with a controlled sudoers allowlist. This is really handy for Operating Systems like Proxmox.
 
