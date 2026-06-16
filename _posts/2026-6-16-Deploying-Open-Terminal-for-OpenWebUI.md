@@ -11,7 +11,7 @@ OpenWebUI is great as a chat interface, but by default it does not magically hav
 
 What I set up was a very stupid, but very workable approach: **Open Terminal running baremetal on the target machine**.
 
-Instead of trying to make the OpenWebUI container itself privileged, we installed `open-terminal` directly on the Linux host. OpenWebUI can then connect to that Open Terminal service over HTTP using an API key. Open Terminal runs commands locally on the host, under a real Linux user, with a controlled sudoers allowlist. This is really handy for Operating Systems like Proxmox.
+Instead of trying to make the OpenWebUI container itself privileged, I installed `open-terminal` directly on the Linux host. OpenWebUI can then connect to that Open Terminal service over HTTP using an API key. Open Terminal runs commands locally on the host, under a real Linux user, with a controlled sudoers allowlist. This is really handy for Operating Systems like Proxmox.
 
 The result is that OpenWebUI can perform useful admin tasks on the machine without needing the OpenWebUI container itself to be fully privileged.
 
