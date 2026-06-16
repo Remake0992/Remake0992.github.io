@@ -3,6 +3,9 @@ title: Deploying Open Terminal for OpenWebUI
 date: 2026-6-16 14:45:00
 categories: [homelab,selfhosted,openwebui]
 tags: [openwebui,open-terminal,linux,systemd,sudo,docker,selfhosted]
+image:
+  path: https://images.pexels.com/photos/8294663/pexels-photo-8294663.jpeg
+  alt: RoboSapien
 ---
 
 ## Giving OpenWebUI hands
