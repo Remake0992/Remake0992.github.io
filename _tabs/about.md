@@ -14,7 +14,7 @@ I am an IT professional who has a deep passsion for learning new things. I am pa
   
 I am currently pursuing a bachelors of Information Science at the University of North Carolina at Greensboro. I'm expected to graduate in 2027. After graduation, I plan to move to Japan. 
 
-I have a strong passion for all gadgets, especially those that promote productivity and focus. You might see me rant a few times about that here on this site. 
+I have a strong passion for all gadgets, especially those that promote productivity and focus. I'm sorry if you've been subjected to one of my rants.
   
 ### Certifications I am actively pursuing: 
   
