@@ -18,12 +18,9 @@ I have a strong passion for all gadgets, especially those that promote productiv
   
 ### Certifications I am actively pursuing: 
   
-#### Q2-2026
-- AZ-104 
-- AZ-500
-- Microsoft 365 Certified: Fundamentals
-  
-#### Q4-2026
-- JLPT N3
-- CCNA
+#### Q3-2026
+- Proxmox VE Certification
+
+#### Q4-2027
+- JLPT N2
 
