@@ -5,11 +5,9 @@ categories: [open-webui,documentation,sync]
 tags: [openwebui,oikb,nextcloud,github,docker,docker-compose]
 ---
 
-# Open WebUI oikb — Nextcloud and GitHub Knowledge Base Sync Setup
-
 ![syncing](https://images.pexels.com/photos/13328054/pexels-photo-13328054.jpeg)
 
-## Overview
+## OIKB
 
 This article documents the setup to add **oikb** Knowledge Base Sync to an existing Open WebUI Docker Compose deployment.
 
