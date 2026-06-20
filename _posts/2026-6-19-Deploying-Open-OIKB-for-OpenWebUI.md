@@ -1,5 +1,5 @@
 ---
-title: Open WebUI oikb — Nextcloud and GitHub Knowledge Base Sync Setup
+title: Deploying OIKB for Open WebUI
 date: 2026-06-19 16:46:00
 categories: [open-webui,documentation,sync]
 tags: [openwebui,oikb,nextcloud,github,docker,docker-compose]
@@ -59,23 +59,6 @@ The Knowledge Base ID is the UUID at the end of the Knowledge Base URL in Open W
 ```
 
 The Open WebUI docs state that the KB ID is the UUID in the Workspace Knowledge Base URL [1].
-
----
-
-# Security Notice
-
-During setup, several live credentials were used or exposed in plain text.
-
-Rotate the following credentials after setup:
-
-- Open WebUI API key
-- Nextcloud app password
-- OIKB API key
-- OpenAI API key
-- OAuth client secret
-- Open WebUI secret key
-
-`oikb` supports environment variable configuration, and `.oikb.yaml` supports variable interpolation such as `${VAR}` and `${VAR:-default}` [2].
 
 ---
 
