@@ -1,28 +1,28 @@
 ---
-title: Deploying Open Terminal for OpenWebUI
+title: Deploying Open Terminal for Open WebUI
 date: 2026-6-16 14:45:00
-categories: [homelab,selfhosted,openwebui]
-tags: [openwebui,open-terminal,linux,systemd,sudo,docker,selfhosted]
+categories: [homelab,selfhosted,Open WebUI]
+tags: [Open WebUI,open-terminal,linux,systemd,sudo,docker,selfhosted]
 ---
 
 ![RoboSapien Toy](https://images.pexels.com/photos/8294663/pexels-photo-8294663.jpeg)
 
-## Giving OpenWebUI hands
+## Giving Open WebUI hands
 
-OpenWebUI is great as a chat interface, but by default it does not magically have access to administer the host systems around it. This becomes especially obvious when OpenWebUI is running in Docker. Giving a container access to `sudo` inside the container does not mean it can administer the baremetal host. Container permissions and host permissions are separate things.
+Open WebUI is great as a chat interface, but by default it does not magically have access to administer the host systems around it. This becomes especially obvious when Open WebUI is running in Docker. Giving a container access to `sudo` inside the container does not mean it can administer the baremetal host. Container permissions and host permissions are separate things.
 
 What I set up was a very stupid, but very workable approach: **Open Terminal running baremetal on the target machine**.
 
-Instead of trying to make the OpenWebUI container itself privileged, I installed `open-terminal` directly on the Linux host. OpenWebUI can then connect to that Open Terminal service over HTTP using an API key. Open Terminal runs commands locally on the host, under a real Linux user, with a controlled sudoers allowlist. This is really handy for Operating Systems like Proxmox.
+Instead of trying to make the Open WebUI container itself privileged, I installed `open-terminal` directly on the Linux host. Open WebUI can then connect to that Open Terminal service over HTTP using an API key. Open Terminal runs commands locally on the host, under a real Linux user, with a controlled sudoers allowlist. This is really handy for Operating Systems like Proxmox.
 
-The result is that OpenWebUI can perform useful admin tasks on the machine without needing the OpenWebUI container itself to be fully privileged.
+The result is that Open WebUI can perform useful admin tasks on the machine without needing the Open WebUI container itself to be fully privileged.
 
 ## Final architecture
 
 The setup looks like this:
 
 ```text
-OpenWebUI
+Open WebUI
    |
    | HTTP API request with API key
    v
@@ -61,7 +61,7 @@ By default, the Open Terminal service listens on:
 0.0.0.0:8054
 ```
 
-That means it accepts connections on all network interfaces. In OpenWebUI, the endpoint should be added as either the hostname or IP of the target machine:
+That means it accepts connections on all network interfaces. In Open WebUI, the endpoint should be added as either the hostname or IP of the target machine:
 
 ```text
 http://network-services:8054
@@ -75,7 +75,7 @@ http://192.168.0.105:8054
 
 ## Why baremetal matters
 
-OpenWebUI may be running in Docker, but the terminal capability I wanted was host-level command execution. If OpenWebUI is containerized, there are a few ways to approach that problem:
+Open WebUI may be running in Docker, but the terminal capability I wanted was host-level command execution. If OpenWe bUI is containerized, there are a few ways to approach that problem:
 
 - give the container more privileges,
 - mount the Docker socket,
@@ -84,7 +84,7 @@ OpenWebUI may be running in Docker, but the terminal capability I wanted was hos
 
 The repeatable option here was the last one: **run Open Terminal directly on the host**.
 
-That keeps OpenWebUI itself from needing privileged container access. OpenWebUI only needs to know the Open Terminal URL and API key.
+That keeps Open WebUI itself from needing privileged container access. Open WebUI only needs to know the Open Terminal URL and API key.
 
 ## How the service is configured
 
@@ -92,7 +92,7 @@ The deployment script creates a `systemd` service similar to this:
 
 ```ini
 [Unit]
-Description=Open Terminal for OpenWebUI
+Description=Open Terminal for Open WebUI
 After=network-online.target
 Wants=network-online.target
 
@@ -146,7 +146,7 @@ The service binds to:
 0.0.0.0
 ```
 
-This allows OpenWebUI to reach the service from another host or from inside a container.
+This allows Open WebUI to reach the service from another host or from inside a container.
 
 ### Listen port
 
@@ -180,7 +180,7 @@ The setup intentionally does **not** use full unrestricted sudo like this:
 username ALL=(ALL) NOPASSWD: ALL
 ```
 
-That would effectively give OpenWebUI full root access to the host.
+That would effectively give Open WebUI full root access to the host.
 
 Instead, the script creates a broad but allowlisted sudoers file:
 
@@ -258,9 +258,9 @@ It does not grant unrestricted access to every command on the system.
 
 ## Why this setup is useful
 
-This gives OpenWebUI a repeatable way to manage other machines in the environment.
+This gives Open WebUI a repeatable way to manage other machines in the environment.
 
-For example, after deploying Open Terminal to a server, OpenWebUI can be configured to connect to that server and perform allowlisted actions such as:
+For example, after deploying Open Terminal to a server, Open WebUI can be configured to connect to that server and perform allowlisted actions such as:
 
 ```bash
 docker ps
@@ -278,7 +278,7 @@ systemctl status docker
 apt update
 ```
 
-Because Open Terminal is installed baremetal, these commands run against the real host, not inside the OpenWebUI container.
+Because Open Terminal is installed baremetal, these commands run against the real host, not inside the Open WebUI container.
 
 ## Deployment script
 
@@ -291,7 +291,7 @@ sudo bash -s <<'SCRIPT'
 set -euo pipefail
 
 # ============================================================
-# Open Terminal baremetal replication script for OpenWebUI
+# Open Terminal baremetal replication script for Open WebUI
 # APT-repo-error-tolerant version
 # ============================================================
 
@@ -401,7 +401,7 @@ if [[ "${INSTALL_SUDOERS}" == "1" ]]; then
   echo "==> Installing broad allowlisted sudoers policy"
 
   cat > /etc/sudoers.d/open-terminal-broad <<EOF
-# Broad allowlisted sudo access for Open Terminal / OpenWebUI.
+# Broad allowlisted sudo access for Open Terminal / Open WebUI.
 # This is intentionally not full NOPASSWD: ALL.
 # Review and reduce for production.
 
@@ -436,7 +436,7 @@ echo "==> Writing systemd service"
 
 cat > /etc/systemd/system/open-terminal.service <<EOF
 [Unit]
-Description=Open Terminal for OpenWebUI
+Description=Open Terminal for Open WebUI
 After=network-online.target
 Wants=network-online.target
 
@@ -496,7 +496,7 @@ echo "Bind host:    ${OPEN_TERMINAL_HOST}"
 echo "Port:         ${OPEN_TERMINAL_PORT}"
 echo "API key:      ${OPEN_TERMINAL_API_KEY}"
 echo
-echo "Add this to OpenWebUI using:"
+echo "Add this to Open WebUI using:"
 echo "  URL:     http://<TARGET_MACHINE_IP>:${OPEN_TERMINAL_PORT}"
 echo "  API key: ${OPEN_TERMINAL_API_KEY}"
 echo
@@ -599,7 +599,7 @@ Bind host:    0.0.0.0
 Port:         8054
 API key:      p_generatedapikeyhere
 
-Add this to OpenWebUI using:
+Add this to Open WebUI using:
   URL:     http://<TARGET_MACHINE_IP>:8054
   API key: p_generatedapikeyhere
 ```
@@ -673,9 +673,9 @@ sudo -u username sudo -n /usr/bin/docker ps
 
 If the commands work without asking for a password, the sudo allowlist is functioning.
 
-## Adding it to OpenWebUI
+## Adding it to Open WebUI
 
-Once Open Terminal is running, add it to OpenWebUI using the URL and API key printed by the script.
+Once Open Terminal is running, add it to Open WebUI using the URL and API key printed by the script.
 
 Example URL by hostname:
 
@@ -695,7 +695,7 @@ The script prints the generated key at the end:
 API key: p_generatedapikeyhere
 ```
 
-Use that key in OpenWebUI’s Open Terminal configuration.
+Use that key in Open WebUI’s Open Terminal configuration.
 
 ## Changing the default user, port, or API key
 
@@ -847,7 +847,7 @@ sudo OPEN_TERMINAL_PORT=8055 bash -s <<'SCRIPT'
 SCRIPT
 ```
 
-Then configure OpenWebUI to use the new port.
+Then configure Open WebUI to use the new port.
 
 ### Sudo still asks for a password
 
@@ -899,7 +899,7 @@ id username
 
 If the user was just added to the Docker group, the user may need to log out and back in for group membership to fully apply in interactive shells. The sudo allowlist should still allow `sudo docker` commands if configured correctly.
 
-### OpenWebUI cannot connect
+### Open WebUI cannot connect
 
 First verify that Open Terminal is listening:
 
@@ -907,7 +907,7 @@ First verify that Open Terminal is listening:
 ss -ltnp | grep 8054
 ```
 
-Then test from the OpenWebUI host:
+Then test from the Open WebUI host:
 
 ```bash
 curl http://network-services:8054
@@ -935,13 +935,13 @@ Restart the service after changing the key:
 sudo systemctl restart open-terminal.service
 ```
 
-Then update the key in OpenWebUI.
+Then update the key in Open WebUI.
 
 ## Security considerations
 
 This setup is convenient, but it should be treated carefully.
 
-The Open Terminal endpoint can run commands on the host. The API key should be protected like a password. The service should only be reachable from trusted systems, such as the OpenWebUI host or a private management network.
+The Open Terminal endpoint can run commands on the host. The API key should be protected like a password. The service should only be reachable from trusted systems, such as the Open WebUI host or a private management network.
 
 The sudoers policy is not full root access, but it is still broad. Review the allowed command aliases before deploying this widely.
 
@@ -952,7 +952,7 @@ Good follow-up improvements would be:
 - rotate API keys periodically,
 - reduce the sudoers allowlist per machine,
 - avoid exposing port `8054` publicly,
-- and document which OpenWebUI users are allowed to use terminal tools.
+- and document which Open WebUI users are allowed to use terminal tools.
 
 One important warning from the service output is that Open Terminal may allow all CORS origins by default:
 
@@ -964,15 +964,15 @@ For a private LAN or VPN-only deployment, this may be acceptable. For anything m
 
 ## Final thoughts
 
-The important part of this setup is that Open Terminal runs **baremetal** on the host. That gives OpenWebUI a clean way to interact with real host services without making the OpenWebUI container itself privileged.
+The important part of this setup is that Open Terminal runs **baremetal** on the host. That gives Open WebUI a clean way to interact with real host services without making the Open WebUI container itself privileged.
 
 To replicate this on another machine:
 
 1. SSH into the target host.
 2. Paste and run the deployment script.
 3. Save the generated API key.
-4. Add the endpoint to OpenWebUI.
+4. Add the endpoint to Open WebUI.
 5. Verify command execution.
 6. Review and tighten the sudoers allowlist if needed.
 
-This gives OpenWebUI enough access to be useful for administration while avoiding the most dangerous option: giving it blanket unrestricted root access.
+This gives Open WebUI enough access to be useful for administration while avoiding the most dangerous option: giving it blanket unrestricted root access.
