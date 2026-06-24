@@ -643,3 +643,120 @@ AI calendar briefings and schedule questions
 ```
 
 Work Outlook adds a second major ICS feed into the same output tree, and school Outlook can be added the same way once the correct feed contains events. The end result is a lightweight, durable, and repeatable calendar-to-Knowledge-Base pipeline built on the same operational approach already used for other Open WebUI data ingestion workflows.
+
+---
+
+# caldav2markdown Commands
+
+This table lists all command‑line flags that the tool recognises, grouped by functional area for quick reference.  
+All options are prefixed with a single hyphen (`-`).  Arguments may be supplied on a single line or split across multiple lines; either form is accepted.
+
+---
+
+## CalDAV‑specific options
+
+| Flag | Description |
+|------|-------------|
+| `-test` | Test the connection only; does **not** fetch events. |
+| `-server-side-filtering` | Use CalDAV server‑side filtering for faster syncs (pre‑filter events on the server). |
+| `-discover-calendars` | Discover and process all calendars present on the server. |
+| `-include-calendars` | Comma‑separated list of calendar names to include (e.g., `Work,Personal`). |
+| `-exclude-calendars` | Comma‑separated list of calendar names to exclude from processing. |
+| `-list-calendars` | List available calendars on the server and exit without syncing. |
+
+---
+
+## Proxy options (applies to all modes)
+
+| Flag | Description |
+|------|-------------|
+| `-proxy-url` | URL of an HTTP/HTTPS proxy (e.g., `http://proxy.example.com:8080`). |
+| `-proxy-username` | Username for proxy authentication. |
+| `-proxy-password` | Password for proxy authentication. |
+
+---
+
+## ics mode options
+
+When running in “ICS” mode you must specify a source file or URL, plus any required authentication.
+
+### Source (pick one)
+
+| Flag | Description |
+|------|-------------|
+| `-ics-path` | Path to a local `.ics` file. |
+| `-ics-url`  | Direct URL pointing to an online `.ics` file. |
+
+### Authentication for remote ics
+
+| Flag | Description |
+|------|-------------|
+| `-ics-auth` | Authentication method: `none`, `basic`, `bearer`, or `header`. Default is `none`. |
+| `-ics-username` | Username used when `-ics-auth basic`. |
+| `-ics-password` | Password used when `-ics-auth basic`. |
+| `-ics-token`   | Bearer token used when `-ics-auth bearer`. |
+
+---
+
+## Database options
+
+These flags enable an optional SQLite database for deduplication and offline use.
+
+| Flag | Description |
+|------|-------------|
+| `-use-database` | Enable the SQLite database. |
+| `-database-path` | Path to the SQLite file (defaults to a file next to the config). |
+| `-from-database` | Generate markdown directly from the existing database instead of fetching from CalDAV/ICS. |
+| `-db-stats` | Show database statistics and exit. |
+| `-db-clear` | Delete all data in the database and exit. |
+
+---
+
+## Common options
+
+These flags are available regardless of mode.
+
+| Flag | Description |
+|------|-------------|
+| `-output` | Directory where markdown files will be written (`./events` by default). |
+| `-config` | Path to a YAML configuration file (defaults to `/home/csadmin/.config/caldav2markdown/config.yaml`). |
+| `-start` | Start date for events in `YYYY‑MM‑DD` format (default: `2000‑01‑01`). |
+| `-end` | End date for events in `YYYY‑MM‑DD` format (default: two years from now). |
+| `-output-format` | Output format: `markdown`, `org`, `org-diary`, or `diary`. Default is `markdown`. |
+| `-emoji` | Prefix due dates with an emoji (disabled by default; can be enabled via this flag). |
+| `-hashtags` | Append `#event` and/or `#task` hashtags to entries. |
+| `-frontmatter` | Prepend a YAML front‑matter block to markdown files. |
+| `-ignore-descriptions` | Skip event descriptions in the output. |
+| `-event-checkboxes` | Render events as task‑style checkboxes (`[ ]`). |
+| `-obsidian-tasks` | Enable the Obsidian preset: checkboxes, ignore descriptions, frontmatter, emojis, and hashtags. |
+| `-single-file` | Generate a single markdown file instead of one per day. |
+| `-single-file-name` | Filename to use when `-single-file` is set (default: `calendar.md` or `calendar.org`). |
+| `-weekly-file` | Create weekly files (`Monday‑Sunday`, ISO week numbers) rather than daily ones. |
+
+---
+
+### Quick example usage
+
+```bash
+# Test connectivity only
+caldav2markdown sync -test
+
+# Full sync with server‑side filtering and calendar discovery
+caldav2markdown sync \
+  -server-side-filtering \
+  -discover-calendars \
+  --output ./my_events \
+  --config ~/.config/caldav2markdown/config.yaml
+
+# Sync a specific calendar, exclude another, using a proxy
+caldav2markdown sync \
+  -include-calendars "Work" \
+  -exclude-calendars "Spam" \
+  -proxy-url http://proxy.example.com:8080 \
+  -output ./work_events
+
+# Load events from an online .ics file with bearer auth
+caldav2markdown sync \
+  -ics-url https://example.com/agenda.ics \
+  -ics-auth bearer \
+  -ics-token "eyJhbGciOiJI..."
