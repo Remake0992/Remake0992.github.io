@@ -10,7 +10,7 @@ order: 4
 
 Hey! Welcome to my site. My name is Collen Saunders. I currently reside in Greensboro, North Carolina. 
 
-I am an IT professional and stereotypical 'tech bro' who has a deep passsion for what I do. I am particularly interested in private cloud architecture and AI applications. I have four years of experience in the Information Technology field. In addition to IT-related areas of study, I study Japanese and have a chronic home-lab addiciton. 
+I am an IT professional and stereotypical 'tech bro' who has a deep passsion for what I do. I am particularly interested in private cloud architecture and AI applications. I have four years of experience in the Information Technology field. In addition to IT-related areas of study, I study Japanese and have a chronic home-lab addiction. 
   
 I am currently pursuing a bachelors of Information Science at the University of North Carolina at Greensboro. I'm expected to graduate in 2027. After graduation, I plan to move to Japan. 
 
