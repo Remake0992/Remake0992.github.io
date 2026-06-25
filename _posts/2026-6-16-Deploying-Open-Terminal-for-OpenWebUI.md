@@ -9,9 +9,9 @@ tags: [Open WebUI,open-terminal,linux,systemd,sudo,docker,selfhosted]
 
 ## Giving Open WebUI hands
 
-Open WebUI is great as a chat interface, but by default it does not magically have access to administer the host systems around it. This becomes especially obvious when Open WebUI is running in Docker. Giving a container access to `sudo` inside the container does not mean it can administer the baremetal host. Container permissions and host permissions are separate things.
+Open WebUI is great as a chat interface, but by default it does not magically have access to administer the host systems around it. This becomes especially obvious when Open WebUI is running in Docker. Giving a container access to `sudo` inside the container does not mean it can administer the bare-metal host. Container permissions and host permissions are separate things.
 
-What I set up was a very stupid, but very workable approach: **Open Terminal running baremetal on the target machine**.
+What I set up was a very stupid, but very workable approach: **Open Terminal running bare-metal on the target machine**.
 
 Instead of trying to make the Open WebUI container itself privileged, I installed `open-terminal` directly on the Linux host. Open WebUI can then connect to that Open Terminal service over HTTP using an API key. Open Terminal runs commands locally on the host, under a real Linux user, with a controlled sudoers allowlist. This is really handy for Operating Systems like Proxmox.
 
@@ -73,7 +73,7 @@ or:
 http://192.168.0.105:8054
 ```
 
-## Why baremetal matters
+## Why bare-metal matters
 
 Open WebUI may be running in Docker, but the terminal capability I wanted was host-level command execution. If OpenWe bUI is containerized, there are a few ways to approach that problem:
 
@@ -278,7 +278,7 @@ systemctl status docker
 apt update
 ```
 
-Because Open Terminal is installed baremetal, these commands run against the real host, not inside the Open WebUI container.
+Because Open Terminal is installed bare-metal, these commands run against the real host, not inside the Open WebUI container.
 
 ## Deployment script
 
@@ -291,7 +291,7 @@ sudo bash -s <<'SCRIPT'
 set -euo pipefail
 
 # ============================================================
-# Open Terminal baremetal replication script for Open WebUI
+# Open Terminal bare-metal replication script for Open WebUI
 # APT-repo-error-tolerant version
 # ============================================================
 
@@ -964,7 +964,7 @@ For a private LAN or VPN-only deployment, this may be acceptable. For anything m
 
 ## Final thoughts
 
-The important part of this setup is that Open Terminal runs **baremetal** on the host. That gives Open WebUI a clean way to interact with real host services without making the Open WebUI container itself privileged.
+The important part of this setup is that Open Terminal runs **bare-metal** on the host. That gives Open WebUI a clean way to interact with real host services without making the Open WebUI container itself privileged.
 
 To replicate this on another machine:
 
