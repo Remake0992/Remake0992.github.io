@@ -6,7 +6,7 @@ order: 3
 
 #### Bag
 
-* [Fjällräven Färden Carry-On pack](https://www.fjallraven.com/us/en-us/bags-gear/backpacks-bags/travel-bags/farden-carry-on-pack/). 
+* [Fjällräven Färden Carry-On pack](https://www.fjallraven.com/us/en-us/bags-gear/backpacks-bags/travel-bags/farden-carry-on-pack/)
 
 #### Tools
 
