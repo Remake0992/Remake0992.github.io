@@ -7,6 +7,9 @@ tags:
   - s3
   - docker
 ---
+
+![storage](https://images.pexels.com/photos/37730212/pexels-photo-37730212.jpeg)
+
 ## Frustrations...
 
 In the year of 2026, storage has become an expensive commodity among price increases that keep... well, increasing. I found myself hit with $30 a month in expenses with my Backblaze bucket which, while cheaper than competitors, is a lot more than I'm willing to spend for Minecraft server backups. Luckily, I had two Unraid servers sitting around and plenty of storage. I asked myself if I was willing to take on the risk of data ownership in order to not pay almost $360 a year in storage costs... and I was! 
