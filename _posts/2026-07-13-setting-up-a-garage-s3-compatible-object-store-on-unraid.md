@@ -87,7 +87,7 @@ I replaced `GKabc123...` & `<secret>` with the values from step 4.
 
 ## Tying in access via Tailscale
 
-Luckily, I already had Tailscale set up in my environment. Using Tailscale, I can access this vault from any of my endpoints using my server's magic DNS name, contentbox. I thought about hosting the endpoints over https, but I really didn't have a need to do so at the time I set this up. Maybe one day in the future I'll set that up for cloud-based applications, but not this time. 
+Luckily, I already had Tailscale set up in my environment. Using Tailscale, I can access this vault from any of my endpoints using my server's magic DNS name, contentbox. I thought about hosting the endpoints over a reverse-proxy for public internet access, but I really didn't have a need to do so at the time I set this up. Maybe one day in the future I'll set that up for cloud-based applications, but not this time. 
 
 ## Mirroring the setup
 
