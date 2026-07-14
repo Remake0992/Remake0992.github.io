@@ -61,13 +61,10 @@ _https://pinternext.cjs-cloud.com_
 
 ## Skills
 
-* **Systems Administration:** Active Directory, Microsoft Azure, Microsoft 365, Google Workspace
+* **Systems Administration:** Active Directory, Microsoft Azure, Microsoft 365, Proxmox
 * **Identity and Access Management:** User provisioning, onboarding and offboarding, organizational units, permissions, and shared drives
 * **Monitoring and Backups:** Zabbix, Veeam Backup & Replication
-* **Infrastructure:** NetBox, Docker, virtual machines, Cisco wireless networking, hybrid infrastructure
-* **Technical Support:** Tier 1 and Tier 2 support, hardware diagnostics, troubleshooting, workstation imaging, and deployment
-* **IT Operations:** Podio, TeamDynamix, PaperCut, asset lifecycle management, and SOP documentation
-* **Additional Skills:** Artificial Intelligence and CSS
+* **Infrastructure:** NetBox, Docker, virtual machines, Unifi networking, hybrid infrastructure
 
 ***
 
