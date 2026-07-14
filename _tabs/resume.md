@@ -6,7 +6,7 @@ order: 2
 
 # Collen Saunders
 **IT Systems Administrator**  
-Greensboro, NC | inquiries@cjs-cloud.com | https://cjs-cloud.com | [LinkedIn](https://www.linkedin.com/in/collen-saunders)
+Greensboro, NC | inquiries@cjs-cloud.com | https://cjs-cloud.com | https://www.linkedin.com/in/collen-saunders | https://github.com/Remake0992
 
 ***
 
