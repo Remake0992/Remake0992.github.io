@@ -18,7 +18,7 @@ I have a strong passion for all tech, especially those that promote productivity
 ### Certifications I am actively pursuing: 
   
 #### Q3-2026
-- Proxmox VE Certification
-
+- [x] Proxmox VE Certification ✅ 2026-07-19
+- [ ] CompTIA Network+ 
 #### Q4-2027
 - JLPT N2 Certification 

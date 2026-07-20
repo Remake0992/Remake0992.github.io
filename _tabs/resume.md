@@ -76,7 +76,9 @@ _University of North Carolina at Greensboro | 2023 – 2027_
 ***
 
 ## Licenses / Certifications
-* **Proxmox VE Complete (Course 200) – Weehooey Inc. (Authorized Proxmox Training Partner), Certificate of Completion, 2026**
+
+* **Proxmox VE Deployment and Management – Proxmox Server Solutions, Certificate of Completion, 2026**
+* **Proxmox VE Clustering and Shared Storage – Proxmox Server Solutions, Certificate of Completion, 2026**
 
 ## Honors & Awards
 
