@@ -1,5 +1,5 @@
 ---
-title: AI-Powered UniFi Network Management with MCP — Deploying on Unraid
+title: AI-Powered UniFi Network Management with MCP
 date: 2026-7-30 09:20:00
 categories:
   - homelab
